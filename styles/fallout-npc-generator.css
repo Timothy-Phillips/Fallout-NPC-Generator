@@ -1,0 +1,494 @@
+`:root {
+  --fallout-primary: #00ff41;
+  --fallout-primary-dark: #00cc33;
+  --fallout-bg: #0a0a0a;
+  --fallout-bg-light: #1a1a1a;
+  --fallout-border: #333;
+  --fallout-text: #00ff41;
+  --fallout-text-muted: #888;
+  --fallout-accent: #ffff00;
+  --fallout-danger: #ff0040;
+}
+
+.fallout-npc-generator {
+  font-family: 'Courier New', monospace;
+  background: var(--fallout-bg);
+  color: var(--fallout-text);
+  border: 2px solid var(--fallout-primary);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+}
+
+.fallout-npc-generator .window-header {
+  background: linear-gradient(135deg, var(--fallout-bg-light), var(--fallout-bg));
+  border-bottom: 1px solid var(--fallout-primary);
+  padding: 8px 16px;
+}
+
+.fallout-npc-generator .window-title {
+  color: var(--fallout-primary);
+  text-shadow: 0 0 10px currentColor;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.fallout-npc-generator .window-content {
+  background: var(--fallout-bg);
+  padding: 0;
+}
+
+/* Tabs */
+.fallout-npc-generator .tabs {
+  background: var(--fallout-bg-light);
+  border-bottom: 1px solid var(--fallout-primary);
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.fallout-npc-generator .tabs .item {
+  flex: 1;
+  padding: 12px 16px;
+  background: transparent;
+  color: var(--fallout-text-muted);
+  border: none;
+  border-right: 1px solid var(--fallout-border);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.fallout-npc-generator .tabs .item:last-child {
+  border-right: none;
+}
+
+.fallout-npc-generator .tabs .item:hover {
+  background: var(--fallout-bg);
+  color: var(--fallout-primary);
+  text-shadow: 0 0 8px currentColor;
+}
+
+.fallout-npc-generator .tabs .item.active {
+  background: var(--fallout-primary);
+  color: var(--fallout-bg);
+  text-shadow: none;
+}
+
+.fallout-npc-generator .tabs .item i {
+  margin-right: 8px;
+}
+
+/* Tab Content */
+.fallout-npc-generator .tab-content {
+  padding: 20px;
+}
+
+.fallout-npc-generator .tab {
+  display: none;
+}
+
+.fallout-npc-generator .tab.active {
+  display: block;
+}
+
+/* Form Elements */
+.fallout-npc-generator .form-group {
+  margin-bottom: 16px;
+}
+
+.fallout-npc-generator label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--fallout-primary);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.fallout-npc-generator input,
+.fallout-npc-generator select {
+  width: 100%;
+  padding: 8px 12px;
+  background: var(--fallout-bg-light);
+  border: 1px solid var(--fallout-border);
+  border-radius: 4px;
+  color: var(--fallout-text);
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+}
+
+.fallout-npc-generator input:focus,
+.fallout-npc-generator select:focus {
+  outline: none;
+  border-color: var(--fallout-primary);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.fallout-npc-generator input::placeholder {
+  color: var(--fallout-text-muted);
+  font-style: italic;
+}
+
+/* Buttons */
+.fallout-npc-generator button {
+  background: var(--fallout-bg-light);
+  border: 1px solid var(--fallout-primary);
+  color: var(--fallout-primary);
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.fallout-npc-generator button:hover {
+  background: var(--fallout-primary);
+  color: var(--fallout-bg);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+}
+
+.fallout-npc-generator button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.fallout-npc-generator button i {
+  margin-right: 8px;
+}
+
+/* Form Actions */
+.fallout-npc-generator .form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.fallout-npc-generator .form-actions button {
+  flex: 1;
+}
+
+/* Checkboxes */
+.fallout-npc-generator .checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fallout-npc-generator .checkbox-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  cursor: pointer;
+  text-transform: none;
+}
+
+.fallout-npc-generator .checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+  accent-color: var(--fallout-primary);
+}
+
+/* Form Sections */
+.fallout-npc-generator .form-section {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: var(--fallout-bg-light);
+  border: 1px solid var(--fallout-border);
+  border-radius: 4px;
+}
+
+.fallout-npc-generator .form-section h3 {
+  margin: 0 0 16px 0;
+  color: var(--fallout-accent);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--fallout-border);
+  padding-bottom: 8px;
+}
+
+/* NPC Preview */
+.fallout-npc-generator .npc-preview {
+  border: 1px solid var(--fallout-primary);
+  border-radius: 4px;
+  background: var(--fallout-bg-light);
+  padding: 16px;
+  cursor: grab;
+}
+
+.fallout-npc-generator .npc-preview:active {
+  cursor: grabbing;
+}
+
+.fallout-npc-generator .npc-header {
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--fallout-border);
+  padding-bottom: 12px;
+}
+
+.fallout-npc-generator .npc-header h2 {
+  margin: 0 0 8px 0;
+  color: var(--fallout-primary);
+  text-shadow: 0 0 10px currentColor;
+  font-size: 20px;
+}
+
+.fallout-npc-generator .npc-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.fallout-npc-generator .npc-meta span {
+  background: var(--fallout-bg);
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: 1px solid var(--fallout-border);
+}
+
+/* SPECIAL Grid */
+.fallout-npc-generator .special-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.fallout-npc-generator .special-grid .stat {
+  text-align: center;
+  background: var(--fallout-bg);
+  border: 1px solid var(--fallout-border);
+  border-radius: 4px;
+  padding: 8px 4px;
+}
+
+.fallout-npc-generator .special-grid .stat label {
+  display: block;
+  margin: 0 0 4px 0;
+  font-size: 12px;
+  color: var(--fallout-accent);
+}
+
+.fallout-npc-generator .special-grid .stat span {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--fallout-primary);
+}
+
+/* Derived Stats */
+.fallout-npc-generator .derived-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.fallout-npc-generator .derived-stats .stat {
+  display: flex;
+  justify-content: space-between;
+  background: var(--fallout-bg);
+  border: 1px solid var(--fallout-border);
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
+.fallout-npc-generator .derived-stats .stat label {
+  margin: 0;
+  color: var(--fallout-text-muted);
+  text-transform: none;
+}
+
+.fallout-npc-generator .derived-stats .stat span {
+  color: var(--fallout-primary);
+  font-weight: bold;
+}
+
+/* Equipment List */
+.fallout-npc-generator .npc-equipment ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fallout-npc-generator .npc-equipment li {
+  background: var(--fallout-bg);
+  border: 1px solid var(--fallout-border);
+  border-radius: 3px;
+  padding: 6px 8px;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+/* Personality Traits */
+.fallout-npc-generator .traits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fallout-npc-generator .trait {
+  background: var(--fallout-primary);
+  color: var(--fallout-bg);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Mutations */
+.fallout-npc-generator .npc-mutations ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fallout-npc-generator .npc-mutations li {
+  background: var(--fallout-danger);
+  color: white;
+  border-radius: 3px;
+  padding: 4px 8px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Backstory */
+.fallout-npc-generator .npc-backstory p {
+  background: var(--fallout-bg);
+  border: 1px solid var(--fallout-border);
+  border-radius: 4px;
+  padding: 12px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Preview Actions */
+.fallout-npc-generator .preview-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--fallout-border);
+}
+
+.fallout-npc-generator .preview-actions button {
+  flex: 1;
+}
+
+/* No Preview State */
+.fallout-npc-generator .no-preview {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--fallout-text-muted);
+}
+
+.fallout-npc-generator .no-preview i {
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: var(--fallout-border);
+}
+
+/* Equipment Tier Display */
+.fallout-npc-generator .equipment-tier-display {
+  font-size: 11px;
+  color: var(--fallout-accent);
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+/* Directory Button */
+.fallout-npc-generator-btn {
+  width: 100%;
+  margin: 8px 0;
+  background: var(--fallout-bg-light);
+  border: 1px solid var(--fallout-primary);
+  color: var(--fallout-primary);
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.fallout-npc-generator-btn:hover {
+  background: var(--fallout-primary);
+  color: var(--fallout-bg);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+}
+
+.fallout-npc-generator-btn i {
+  margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fallout-npc-generator .tabs {
+    flex-direction: column;
+  }
+  
+  .fallout-npc-generator .tabs .item {
+    border-right: none;
+    border-bottom: 1px solid var(--fallout-border);
+  }
+  
+  .fallout-npc-generator .special-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .fallout-npc-generator .form-actions {
+    flex-direction: column;
+  }
+  
+  .fallout-npc-generator .preview-actions {
+    flex-direction: column;
+  }
+}
+
+/* Animation for text glow effect */
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px currentColor; }
+  50% { text-shadow: 0 0 20px currentColor, 0 0 30px currentColor; }
+}
+
+.fallout-npc-generator .npc-header h2 {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Scanlines effect (subtle) */
+.fallout-npc-generator::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 65, 0.03) 2px,
+    rgba(0, 255, 65, 0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.fallout-npc-generator .window-content {
+  position: relative;
+  z-index: 2;
+}`

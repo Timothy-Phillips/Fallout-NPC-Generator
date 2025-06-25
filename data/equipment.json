@@ -1,0 +1,118 @@
+const equipmentData = [
+  {
+    "name": "Pipe Pistol",
+    "type": "weapon",
+    "tier": 1,
+    "archetypes": ["human"],
+    "factions": ["Raiders", "Wastelanders"],
+    "system": {
+      "damage": "2d6",
+      "range": "Close",
+      "qualities": ["Crude", "Unreliable"]
+    }
+  },
+  {
+    "name": "10mm Pistol", 
+    "type": "weapon",
+    "tier": 2,
+    "archetypes": ["human"],
+    "factions": ["Vault Dwellers", "Settlers", "Traders"],
+    "system": {
+      "damage": "3d6",
+      "range": "Close", 
+      "qualities": ["Reliable"]
+    }
+  },
+  {
+    "name": "Laser Rifle",
+    "type": "weapon", 
+    "tier": 3,
+    "archetypes": ["human"],
+    "factions": ["Brotherhood of Steel", "Enclave"],
+    "system": {
+      "damage": "4d6",
+      "range": "Medium",
+      "qualities": ["Energy", "Accurate"]
+    }
+  },
+  {
+    "name": "Super Sledge",
+    "type": "weapon",
+    "tier": 2,
+    "archetypes": ["super-mutant", "human"],
+    "factions": ["Super Mutants", "Raiders"],
+    "system": {
+      "damage": "5d6",
+      "range": "Reach",
+      "qualities": ["Melee", "Knockdown"]
+    }
+  },
+  {
+    "name": "Leather Armor",
+    "type": "armor",
+    "tier": 1,
+    "archetypes": ["human"],
+    "factions": ["Raiders", "Wastelanders", "Traders"],
+    "system": {
+      "defense": "+1",
+      "coverage": "Torso",
+      "qualities": ["Light"]
+    }
+  },
+  {
+    "name": "Combat Armor",
+    "type": "armor",
+    "tier": 2, 
+    "archetypes": ["human"],
+    "factions": ["Vault Dwellers", "Settlers", "New California Republic"],
+    "system": {
+      "defense": "+2",
+      "coverage": "Full Body",
+      "qualities": ["Medium"]
+    }
+  },
+  {
+    "name": "Power Armor",
+    "type": "armor",
+    "tier": 3,
+    "archetypes": ["human"],
+    "factions": ["Brotherhood of Steel", "Enclave"],
+    "system": {
+      "defense": "+4",
+      "coverage": "Full Body", 
+      "qualities": ["Heavy", "Powered", "Environmental"]
+    }
+  },
+  {
+    "name": "Stimpak",
+    "type": "consumable",
+    "tier": 1,
+    "archetypes": ["human", "ghoul"],
+    "factions": ["Vault Dwellers", "Traders", "Brotherhood of Steel"],
+    "system": {
+      "healing": "1d6+2",
+      "uses": 1
+    }
+  },
+  {
+    "name": "Rad-Away",
+    "type": "consumable", 
+    "tier": 2,
+    "archetypes": ["human"],
+    "factions": ["Vault Dwellers", "Traders", "Brotherhood of Steel"],
+    "system": {
+      "effect": "Removes radiation",
+      "uses": 1
+    }
+  },
+  {
+    "name": "Bottle Caps",
+    "type": "currency",
+    "tier": 1,
+    "archetypes": ["human", "ghoul"],
+    "factions": ["Traders", "Wastelanders", "Raiders"],
+    "system": {
+      "value": "2d6*10"
+    }
+  }
+];

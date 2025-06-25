@@ -1,0 +1,233 @@
+`<form class="fallout-npc-generator-form">
+  <nav class="tabs" data-group="primary-tabs">
+    <a class="item" data-tab="basic">
+      <i class="fas fa-user"></i>
+      {{localize "FALLOUT_NPC_GEN.Tabs.Basic"}}
+    </a>
+    <a class="item" data-tab="advanced">
+      <i class="fas fa-cogs"></i>
+      {{localize "FALLOUT_NPC_GEN.Tabs.Advanced"}}
+    </a>
+    <a class="item" data-tab="preview">
+      <i class="fas fa-eye"></i>
+      {{localize "FALLOUT_NPC_GEN.Tabs.Preview"}}
+    </a>
+  </nav>
+
+  <section class="tab-content">
+    <!-- Basic Tab -->
+    <div class="tab" data-tab="basic">
+      <div class="form-group">
+        <label for="archetype">{{localize "FALLOUT_NPC_GEN.Fields.Archetype"}}</label>
+        <select name="archetype" id="archetype">
+          <option value="">{{localize "FALLOUT_NPC_GEN.Options.Random"}}</option>
+          {{#each archetypes}}
+            <option value="{{this.id}}">{{this.name}}</option>
+          {{/each}}
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="level">{{localize "FALLOUT_NPC_GEN.Fields.Level"}}</label>
+        <input type="number" name="level" id="level" min="1" max="10" placeholder="{{localize 'FALLOUT_NPC_GEN.Placeholders.RandomLevel'}}">
+        <span class="equipment-tier-display"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="faction">{{localize "FALLOUT_NPC_GEN.Fields.Faction"}}</label>
+        <select name="faction" id="faction">
+          <option value="">{{localize "FALLOUT_NPC_GEN.Options.Random"}}</option>
+          {{#each factions}}
+            <option value="{{this}}">{{this}}</option>
+          {{/each}}
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="name">{{localize "FALLOUT_NPC_GEN.Fields.Name"}}</label>
+        <input type="text" name="name" id="name" placeholder="{{localize 'FALLOUT_NPC_GEN.Placeholders.RandomName'}}">
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="randomize-btn">
+          <i class="fas fa-dice"></i>
+          {{localize "FALLOUT_NPC_GEN.Buttons.Randomize"}}
+        </button>
+        <button type="button" class="generate-btn">
+          <i class="fas fa-magic"></i>
+          {{localize "FALLOUT_NPC_GEN.Buttons.Generate"}}
+        </button>
+      </div>
+    </div>
+
+    <!-- Advanced Tab -->
+    <div class="tab" data-tab="advanced">
+      <div class="form-section">
+        <h3>{{localize "FALLOUT_NPC_GEN.Sections.Options"}}</h3>
+        
+        <div class="checkbox-group">
+          <label>
+            <input type="checkbox" name="includeEquipment" checked>
+            {{localize "FALLOUT_NPC_GEN.Options.IncludeEquipment"}}
+          </label>
+          
+          <label>
+            <input type="checkbox" name="includeMutations" checked>
+            {{localize "FALLOUT_NPC_GEN.Options.IncludeMutations"}}
+          </label>
+          
+          <label>
+            <input type="checkbox" name="includePersonality" checked>
+            {{localize "FALLOUT_NPC_GEN.Options.IncludePersonality"}}
+          </label>
+          
+          {{#if generateBackstories}}
+          <label>
+            <input type="checkbox" name="includeBackstory" checked>
+            {{localize "FALLOUT_NPC_GEN.Options.IncludeBackstory"}}
+          </label>
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3>{{localize "FALLOUT_NPC_GEN.Sections.BatchGeneration"}}</h3>
+        
+        <div class="form-group">
+          <label for="batchCount">{{localize "FALLOUT_NPC_GEN.Fields.BatchCount"}}</label>
+          <input type="number" name="batchCount" id="batchCount" min="1" max="20" value="1">
+        </div>
+        
+        <button type="button" class="batch-generate-btn">
+          <i class="fas fa-users"></i>
+          {{localize "FALLOUT_NPC_GEN.Buttons.BatchGenerate"}}
+        </button>
+      </div>
+    </div>
+
+    <!-- Preview Tab -->
+    <div class="tab" data-tab="preview">
+      {{#if generatedNPC}}
+        <div class="npc-preview" draggable="true">
+          <div class="npc-header">
+            <h2>{{generatedNPC.name}}</h2>
+            <div class="npc-meta">
+              <span class="archetype">{{generatedNPC.archetype}}</span>
+              <span class="level">Level {{generatedNPC.level}}</span>
+              <span class="faction">{{generatedNPC.faction}}</span>
+            </div>
+          </div>
+
+          <div class="npc-stats">
+            <h3>{{localize "FALLOUT_NPC_GEN.Preview.Special"}}</h3>
+            <div class="special-grid">
+              <div class="stat">
+                <label>S</label>
+                <span>{{generatedNPC.special.strength}}</span>
+              </div>
+              <div class="stat">
+                <label>P</label>
+                <span>{{generatedNPC.special.perception}}</span>
+              </div>
+              <div class="stat">
+                <label>E</label>
+                <span>{{generatedNPC.special.endurance}}</span>
+              </div>
+              <div class="stat">
+                <label>C</label>
+                <span>{{generatedNPC.special.charisma}}</span>
+              </div>
+              <div class="stat">
+                <label>I</label>
+                <span>{{generatedNPC.special.intelligence}}</span>
+              </div>
+              <div class="stat">
+                <label>A</label>
+                <span>{{generatedNPC.special.agility}}</span>
+              </div>
+              <div class="stat">
+                <label>L</label>
+                <span>{{generatedNPC.special.luck}}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="npc-derived">
+            <h3>{{localize "FALLOUT_NPC_GEN.Preview.Derived"}}</h3>
+            <div class="derived-stats">
+              <div class="stat">
+                <label>Health:</label>
+                <span>{{generatedNPC.derived.health}}</span>
+              </div>
+              <div class="stat">
+                <label>Defense:</label>
+                <span>{{generatedNPC.derived.defense}}</span>
+              </div>
+              <div class="stat">
+                <label>Initiative:</label>
+                <span>{{generatedNPC.derived.initiative}}</span>
+              </div>
+            </div>
+          </div>
+
+          {{#if generatedNPC.equipment}}
+            <div class="npc-equipment">
+              <h3>{{localize "FALLOUT_NPC_GEN.Preview.Equipment"}}</h3>
+              <ul>
+                {{#each generatedNPC.equipment}}
+                  <li>{{this.name}} ({{this.type}})</li>
+                {{/each}}
+              </ul>
+            </div>
+          {{/if}}
+
+          {{#if generatedNPC.personality}}
+            <div class="npc-personality">
+              <h3>{{localize "FALLOUT_NPC_GEN.Preview.Personality"}}</h3>
+              <div class="traits">
+                {{#each generatedNPC.personality}}
+                  <span class="trait">{{this}}</span>
+                {{/each}}
+              </div>
+            </div>
+          {{/if}}
+
+          {{#if generatedNPC.mutations}}
+            <div class="npc-mutations">
+              <h3>{{localize "FALLOUT_NPC_GEN.Preview.Mutations"}}</h3>
+              <ul>
+                {{#each generatedNPC.mutations}}
+                  <li>{{this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+          {{/if}}
+
+          {{#if generatedNPC.backstory}}
+            <div class="npc-backstory">
+              <h3>{{localize "FALLOUT_NPC_GEN.Preview.Backstory"}}</h3>
+              <p>{{generatedNPC.backstory}}</p>
+            </div>
+          {{/if}}
+
+          <div class="preview-actions">
+            <button type="button" class="save-npc-btn">
+              <i class="fas fa-save"></i>
+              {{localize "FALLOUT_NPC_GEN.Buttons.SaveToActors"}}
+            </button>
+            <button type="button" class="export-btn">
+              <i class="fas fa-download"></i>
+              {{localize "FALLOUT_NPC_GEN.Buttons.Export"}}
+            </button>
+          </div>
+        </div>
+      {{else}}
+        <div class="no-preview">
+          <i class="fas fa-radiation"></i>
+          <p>{{localize "FALLOUT_NPC_GEN.Preview.NoData"}}</p>
+        </div>
+      {{/if}}
+    </div>
+  </section>
+</form>`
+

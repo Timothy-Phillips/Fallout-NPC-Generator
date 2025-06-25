@@ -1,0 +1,72 @@
+const languageData = {
+  "FALLOUT_NPC_GEN": {
+    "UI": {
+      "Title": "Fallout NPC Generator",
+      "GenerateWastelandNPC": "Generate Wasteland NPC"
+    },
+    "Tabs": {
+      "Basic": "Basic",
+      "Advanced": "Advanced", 
+      "Preview": "Preview"
+    },
+    "Fields": {
+      "Archetype": "Archetype",
+      "Level": "Level",
+      "Faction": "Faction",
+      "Name": "Name",
+      "BatchCount": "Number to Generate"
+    },
+    "Options": {
+      "Random": "Random",
+      "IncludeEquipment": "Include Equipment",
+      "IncludeMutations": "Include Mutations",
+      "IncludePersonality": "Include Personality",
+      "IncludeBackstory": "Generate Backstory"
+    },
+    "Placeholders": {
+      "RandomLevel": "Random (1-10)",
+      "RandomName": "Leave blank for random"
+    },
+    "Buttons": {
+      "Randomize": "Randomize All",
+      "Generate": "Generate NPC",
+      "BatchGenerate": "Batch Generate",
+      "SaveToActors": "Save to Actors",
+      "Export": "Export JSON"
+    },
+    "Sections": {
+      "Options": "Generation Options",
+      "BatchGeneration": "Batch Generation"
+    },
+    "Preview": {
+      "Special": "S.P.E.C.I.A.L.",
+      "Derived": "Derived Stats",
+      "Equipment": "Equipment",
+      "Personality": "Personality",
+      "Mutations": "Mutations", 
+      "Backstory": "Backstory",
+      "NoData": "Generate an NPC to see preview"
+    },
+    "ContextMenu": {
+      "GenerateNPC": "Generate Fallout NPC"
+    },
+    "Settings": {
+      "IncludePortraits": {
+        "Name": "Include Portraits",
+        "Hint": "Automatically assign portrait images to generated NPCs"
+      },
+      "GenerateBackstories": {
+        "Name": "Generate Backstories",
+        "Hint": "Include backstory generation in the advanced options"
+      },
+      "DefaultFolder": {
+        "Name": "Default Folder",
+        "Hint": "Name of the folder where generated NPCs will be stored"
+      }
+    },
+    "Keybindings": {
+      "OpenGenerator": "Open NPC Generator",
+      "OpenGeneratorHint": "Opens the Fallout NPC Generator dialog"
+    }
+  }
+};

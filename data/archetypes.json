@@ -1,0 +1,106 @@
+const archetypesData = [
+  {
+    "id": "wastelander",
+    "name": "Wastelander",
+    "type": "human",
+    "description": "Hardy survivors who have adapted to life in the wasteland.",
+    "compatibleFactions": ["Wastelanders", "Traders", "Settlers"],
+    "specialPreferences": {
+      "endurance": { "min": 6, "max": 9, "weight": 3 },
+      "perception": { "min": 5, "max": 8, "weight": 2 },
+      "agility": { "min": 5, "max": 8, "weight": 2 },
+      "strength": { "min": 4, "max": 7, "weight": 1 }
+    }
+  },
+  {
+    "id": "raider",
+    "name": "Raider",
+    "type": "human",
+    "description": "Violent opportunists who prey on the weak.",
+    "compatibleFactions": ["Raiders"],
+    "specialPreferences": {
+      "strength": { "min": 6, "max": 10, "weight": 3 },
+      "agility": { "min": 5, "max": 9, "weight": 2 },
+      "endurance": { "min": 5, "max": 8, "weight": 2 },
+      "charisma": { "min": 3, "max": 6, "weight": 1 }
+    }
+  },
+  {
+    "id": "vault-dweller",
+    "name": "Vault Dweller",
+    "type": "human",
+    "description": "Sheltered individuals from the underground vaults.",
+    "compatibleFactions": ["Vault Dwellers", "Settlers"],
+    "specialPreferences": {
+      "intelligence": { "min": 6, "max": 10, "weight": 3 },
+      "perception": { "min": 5, "max": 8, "weight": 2 },
+      "charisma": { "min": 5, "max": 8, "weight": 2 },
+      "endurance": { "min": 3, "max": 6, "weight": 1 }
+    }
+  },
+  {
+    "id": "brotherhood-knight",
+    "name": "Brotherhood Knight",
+    "type": "human", 
+    "description": "Disciplined warriors of the Brotherhood of Steel.",
+    "compatibleFactions": ["Brotherhood of Steel"],
+    "specialPreferences": {
+      "strength": { "min": 7, "max": 10, "weight": 3 },
+      "endurance": { "min": 6, "max": 9, "weight": 2 },
+      "intelligence": { "min": 5, "max": 8, "weight": 2 },
+      "charisma": { "min": 4, "max": 7, "weight": 1 }
+    }
+  },
+  {
+    "id": "super-mutant",
+    "name": "Super Mutant",
+    "type": "super-mutant",
+    "description": "FEV-enhanced giants with immense strength.",
+    "compatibleFactions": ["Super Mutants", "Wastelanders"],
+    "specialPreferences": {
+      "strength": { "min": 8, "max": 10, "weight": 4 },
+      "endurance": { "min": 7, "max": 10, "weight": 3 },
+      "intelligence": { "min": 3, "max": 6, "weight": 1 },
+      "charisma": { "min": 2, "max": 5, "weight": 1 }
+    }
+  },
+  {
+    "id": "ghoul",
+    "name": "Ghoul",
+    "type": "ghoul",
+    "description": "Radiation-mutated humans with extended lifespans.",
+    "compatibleFactions": ["Wastelanders", "Traders", "Settlers"],
+    "specialPreferences": {
+      "endurance": { "min": 7, "max": 10, "weight": 3 },
+      "intelligence": { "min": 5, "max": 9, "weight": 2 },
+      "perception": { "min": 5, "max": 8, "weight": 2 },
+      "charisma": { "min": 2, "max": 6, "weight": 1 }
+    }
+  },
+  {
+    "id": "trader",
+    "name": "Trader",
+    "type": "human",
+    "description": "Merchants who travel the wasteland buying and selling goods.",
+    "compatibleFactions": ["Traders", "Wastelanders", "Settlers"],
+    "specialPreferences": {
+      "charisma": { "min": 7, "max": 10, "weight": 3 },
+      "intelligence": { "min": 6, "max": 9, "weight": 2 },
+      "perception": { "min": 5, "max": 8, "weight": 2 },
+      "luck": { "min": 5, "max": 8, "weight": 1 }
+    }
+  },
+  {
+    "id": "settler",
+    "name": "Settler",
+    "type": "human",
+    "description": "Community builders trying to rebuild civilization.",
+    "compatibleFactions": ["Settlers", "Minutemen", "New California Republic"],
+    "specialPreferences": {
+      "intelligence": { "min": 5, "max": 8, "weight": 2 },
+      "charisma": { "min": 5, "max": 8, "weight": 2 },
+      "endurance": { "min": 5, "max": 8, "weight": 2 },
+      "strength": { "min": 4, "max": 7, "weight": 1 }
+    }
+  }
+];

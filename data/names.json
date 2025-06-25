@@ -1,0 +1,65 @@
+const namesData = {
+  "human": {
+    "first": [
+      "Aaron", "Abigail", "Adam", "Adrian", "Alex", "Alice", "Amanda", "Andrew", "Angela", "Anna",
+      "Anthony", "Ashley", "Barbara", "Benjamin", "Betty", "Brian", "Carl", "Carol", "Catherine", "Charles",
+      "Christopher", "Daniel", "David", "Deborah", "Dennis", "Diana", "Donald", "Donna", "Dorothy", "Edward",
+      "Elizabeth", "Emily", "Frank", "Gary", "George", "Helen", "Henry", "Jack", "James", "Jane",
+      "Janet", "Jason", "Jean", "Jeffrey", "Jennifer", "Jerry", "Jessica", "Joan", "John", "Joseph",
+      "Joshua", "Joyce", "Judith", "Julie", "Justin", "Karen", "Katherine", "Kathleen", "Kenneth", "Kevin",
+      "Kimberly", "Larry", "Laura", "Lawrence", "Linda", "Lisa", "Margaret", "Maria", "Marie", "Mark",
+      "Martha", "Mary", "Matthew", "Michael", "Michelle", "Nancy", "Nicholas", "Nicole", "Pamela", "Patricia",
+      "Patrick", "Paul", "Peter", "Philip", "Rachel", "Ralph", "Raymond", "Rebecca", "Richard", "Robert",
+      "Roger", "Ronald", "Roy", "Ruth", "Ryan", "Sandra", "Sarah", "Scott", "Sharon", "Shirley",
+      "Stephen", "Steven", "Susan", "Teresa", "Thomas", "Timothy", "Walter", "Wayne", "William", "Willie"
+    ],
+    "last": [
+      "Adams", "Anderson", "Baker", "Brown", "Campbell", "Carter", "Clark", "Davis", "Evans", "Garcia",
+      "Hall", "Harris", "Jackson", "Johnson", "Jones", "King", "Lee", "Lewis", "Lopez", "Martin",
+      "Martinez", "Miller", "Mitchell", "Moore", "Nelson", "Parker", "Perez", "Phillips", "Roberts", "Robinson",
+      "Rodriguez", "Smith", "Taylor", "Thomas", "Thompson", "Turner", "Walker", "Ward", "White", "Williams",
+      "Wilson", "Wood", "Wright", "Young", "Allen", "Bell", "Bennett", "Brooks", "Butler", "Collins",
+      "Cook", "Cooper", "Cox", "Cruz", "Diaz", "Edwards", "Flores", "Foster", "Gomez", "Gonzalez",
+      "Gray", "Green", "Gutierrez", "Hayes", "Henderson", "Hernandez", "Hill", "Howard", "Hughes", "James",
+      "Jenkins", "Kelly", "Long", "Morales", "Morgan", "Morris", "Murphy", "Myers", "Ortiz", "Powell",
+      "Price", "Ramirez", "Reed", "Reyes", "Richardson", "Rivera", "Ross", "Russell", "Sanchez", "Sanders",
+      "Scott", "Stewart", "Sullivan", "Torres", "Washington", "Watson", "Webb", "Wells", "West", "Woods"
+    ]
+  },
+  "ghoul": {
+    "first": [
+      "Rotface", "Decay", "Corpse", "Bone", "Scar", "Wraith", "Hollow", "Grim", "Shade", "Dust",
+      "Ash", "Rust", "Grave", "Mort", "Death", "Skull", "Void", "Ghost", "Phantom", "Spirit",
+      "Aaron", "Abraham", "Albert", "Alfred", "Arthur", "Bernard", "Cecil", "Chester", "Clarence", "Edgar",
+      "Edmund", "Edwin", "Ernest", "Eugene", "Francis", "Franklin", "Frederick", "George", "Harold", "Herbert",
+      "Howard", "Irving", "Jerome", "Lawrence", "Leonard", "Louis", "Maurice", "Norman", "Oscar", "Raymond",
+      "Agnes", "Alice", "Bertha", "Clara", "Dorothy", "Edith", "Eleanor", "Elizabeth", "Ethel", "Florence",
+      "Frances", "Gertrude", "Grace", "Helen", "Irene", "Lillian", "Margaret", "Marie", "Martha", "Mary"
+    ],
+    "last": [
+      "Bonechewer", "Rotgut", "Skinless", "Marrow", "Corpsewalker", "Grimface", "Hollowbone", "Deadmeat", "Graveyard", "Dustbowl",
+      "Adams", "Baker", "Clark", "Davis", "Evans", "Foster", "Garcia", "Harris", "Johnson", "Kelly",
+      "Lewis", "Miller", "Nelson", "Parker", "Roberts", "Smith", "Taylor", "Turner", "Walker", "Wilson"
+    ]
+  },
+  "super-mutant": {
+    "single": [
+      "Marcus", "Strong", "Fawkes", "Lily", "Uncle Leo", "Neil", "Tabitha", "Mean Sonofabitch", "Dog", "God",
+      "Hammer", "Boulder", "Tank", "Crusher", "Sledge", "Anvil", "Steel", "Iron", "Rock", "Stone",
+      "Thunder", "Storm", "Rage", "Fury", "Wrath", "Beast", "Brute", "Giant", "Titan", "Goliath",
+      "Fist", "Knuckle", "Smash", "Crash", "Bash", "Pound", "Thump", "Boom", "Bang", "Slam",
+      "Red", "Blue", "Green", "Yellow", "Black", "White", "Gray", "Brown", "Purple", "Orange"
+    ]
+  },
+  "robot": {
+    "prefixes": [
+      "Mr.", "Ms.", "Unit", "Bot", "Droid", "Mech", "Auto", "Cyber", "Tech", "Proto",
+      "Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta", "Eta", "Theta", "Iota", "Kappa"
+    ],
+    "suffixes": [
+      "Handy", "Gutsy", "Prime", "3000", "2000", "X", "Pro", "Plus", "Max", "Ultra",
+      "Mark I", "Mark II", "Mark III", "Mark IV", "Mark V", "Series A", "Series B", "Series C",
+      "Model 1", "Model 2", "Model 3", "Version 1.0", "Version 2.0", "Version 3.0"
+    ]
+  }
+};
